@@ -1,16 +1,16 @@
 const Navbar = () => {
-    
+
   return (
     <nav className="navbar">
       <div>
-        <a href="">Bproo Blog</a>
+        <a className="logo" href="">Bproo Blog</a>
       </div>
       <ul className="liens">
         <li>
-          <a href="" className="lien">Acceuill</a>
+          <a href="" className="lien">Acceuil</a>
         </li>
         <li>
-          <a href="" className="lien">Creer Article</a>
+          <a href="" className="lien buttonArticle" >Creer Article</a>
         </li>
       </ul>
     </nav>
