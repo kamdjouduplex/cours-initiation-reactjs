@@ -1,34 +1,9 @@
-import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
+import useRecuperation from './useRecuperation.js';
 
 const Home = () => {
 
-    const [blogs, setBlog] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect( ()=> {
-        setTimeout( () => {
-            fetch('http://localhost:8000/blogs')
-                .then( (response) => {
-                    if(!response.ok){
-                        throw Error('Desole une erreur est survenu...');
-                    }
-                    return response.json();
-                })
-                .then( (data) => {
-                    setBlog(data);
-                    setIsLoading(false);
-                    setError(null);
-                })
-                .catch( err => {
-                    console.log(err.message);
-                    setError(err.message);
-                    setIsLoading(false);
-                })
-        },2000)
-    }, []);
-
+    const {data: blogs, isLoading, error} = useRecuperation('http://localhost:8000/blogs');
     return ( 
         <div className="home">
             { error && <div style={ {'color': 'red'}}>{error}</div>} 
