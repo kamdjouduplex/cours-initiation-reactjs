@@ -27,6 +27,8 @@ const Home = () => {
           }
     ]);
 
+    const [name, setName] = useState('Duplex');
+
     const HandleDelete = (id) => {
         const newBlogs = blogs.filter( (blog) => blog.id !== id);
         setBlog(newBlogs);
@@ -35,11 +37,13 @@ const Home = () => {
     useEffect( ()=> {
         console.log('Use Effet a ete appele...');
         console.log(blogs);
-    });
+    }, [name]);
 
     return ( 
         <div className="home">
             <BlogList blogs={blogs} title={'Liste des blogs'} HandleDelete={HandleDelete} />
+            <button onClick={ () => setName('Tony') }>change le nom</button>
+            <p>{name}</p>
         </div>
      );
 }
