@@ -104,3 +104,68 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+
+.titre-principale{
+  text-align: left;
+}
+
+
+/* form style */
+
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 15px;
+}
+label{
+  font-size: 1rem;
+  color: #646464;
+}
+.form-control{
+  height: 2rem;
+  font-size: large;
+  border-radius: 0.2rem;
+  border: solid 1px #bbb;
+  font-size: 1rem;
+  color: #646464;
+}
+
+.textarea{
+  height: 5rem;
+  font-size: 1.2rem;
+}
+
+.btn-create{
+  background: #028bfc;
+  color: #fff;
+  padding:0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  width: 150px;
+  font-size: 1.2rem;
+}
+
+.btn-danger{
+  background: #fc1f02;
+  color: #fff;
+}
+
+.not-found{
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.not-found a{
+  text-decoration: none;
+  color: #028bfc;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
